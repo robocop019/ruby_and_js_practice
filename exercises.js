@@ -89,17 +89,17 @@
 // Write a method that accepts an array of strings and returns a new array that has the string "awesomesauce" inserted between every string. 
 // For example, if the initial array is ["a", "b", "c", "d", "e"], then the returned array should be ["a", "awesomesauce", "b", "awesomesauce", "c", "awesomesauce", "d", "awesomesauce", "e"].
 
-function awesome(array) {
-  var newArray = [];
-  var lastItem = array.pop();
-  array.forEach(function(char){
-    newArray.push(char, 'awesomesauce');
-  });
-  newArray.push(lastItem);
-  return newArray;
-}
+// function awesome(array) {
+//   var newArray = [];
+//   var lastItem = array.pop();
+//   array.forEach(function(char){
+//     newArray.push(char, 'awesomesauce');
+//   });
+//   newArray.push(lastItem);
+//   return newArray;
+// }
 
-console.log(awesome(["a", "b", "c", "d", "e"]));
+// console.log(awesome(["a", "b", "c", "d", "e"]));
 
 
 // Start with the hash: item_amounts = {chair: 5, table: 2}
@@ -155,3 +155,45 @@ console.log(awesome(["a", "b", "c", "d", "e"]));
 // }
 
 // console.log(addingArrays([1, 5, 10], [100, 500, 1000]));
+
+// Write a function that accepts an array of strings and returns a new array containing every other string from the original array. For example, if the input is ["a", "b", "c", "d", "e", "f"], the output should be ["a", "c", "e"].
+
+// function printEveryOther(strings) {
+//   var index = 0;
+//   var newArray = [];
+//   strings.forEach(function(string) {
+//     if (index % 2 === 0) {
+//       newArray.push(string);
+//     }
+//     index++;
+//   });
+//   return newArray;
+// }
+
+// console.log(printEveryOther(["a", "b", "c", "d", "e", "f"]));
+
+// # Write a method that accepts one argument - an array of numbers. The method should return the greatest number. For example, if the input is [5, 4, 8, 1, 2], the output should be 8.
+
+// function greatestNumber(numbers) {
+//   var highNum = numbers[0];
+//   numbers.forEach(function(number) {
+//     if (number > highNum) {
+//       highNum = number;
+//     }
+//   });
+//   return highNum;
+// }
+
+// console.log(greatestNumber([5, 4, 8, 1, 2, 10]));
+
+// # Write a method that accepts one argument - an array of numbers that are in ascending order. The method that returns a new array with the same values in descending order. However, do not use the "reverse" method built in to Ruby.
+
+function reverseNumbers(numbers) {
+  var newArray = [];
+  for(var index = numbers.length - 1; index >= 0; index--) {
+    newArray.push(numbers[index]);
+  }
+  return newArray;
+}
+
+console.log(reverseNumbers([1, 3, 5, 7]));

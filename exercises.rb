@@ -85,16 +85,16 @@
 # Write a method that accepts an array of strings and returns a new array that has the string "awesomesauce" inserted between every string. 
 # For example, if the initial array is ["a", "b", "c", "d", "e"], then the returned array should be ["a", "awesomesauce", "b", "awesomesauce", "c", "awesomesauce", "d", "awesomesauce", "e"].
 
-def awesome(array)
-  new_array = []
-  array.each do |char|
-    new_array << char
-    new_array << 'awesomesauce' if array.last != char
-  end
-  new_array
-end  
+# def awesome(array)
+#   new_array = []
+#   array.each do |char|
+#     new_array << char
+#     new_array << 'awesomesauce' if array.last != char
+#   end
+#   new_array
+# end  
 
-p awesome(["a", "b", "c", "d", "e"])
+# p awesome(["a", "b", "c", "d", "e"])
 
 
 # Start with the hash: item_amounts = {chair: 5, table: 2}
@@ -148,3 +148,44 @@ p awesome(["a", "b", "c", "d", "e"])
 # end
 
 # p adding_arrays([1, 5, 10], [100, 500, 1000])
+
+# Write a function that accepts an array of strings and returns a new array containing every other string from the original array. For example, if the input is ["a", "b", "c", "d", "e", "f"], the output should be ["a", "c", "e"].
+
+# def select_even_items(strings)
+#   result = []
+#   index = 0
+#   strings.each do |string|
+#     if index % 2 == 0
+#       result << string
+#     end
+#     index = index + 1
+#   end
+#   result
+# end
+# p select_even_items(["a", "b", "c", "d", "e", "f"])
+
+# Write a method that accepts one argument - an array of numbers. The method should return the greatest number. For example, if the input is [5, 4, 8, 1, 2], the output should be 8.
+
+# def greatest_num(numbers)
+#   high_num = numbers[0]
+#   numbers.each do |number|
+#     high_num = number if number > high_num
+#   end
+#   high_num
+# end
+
+# puts greatest_num([5, 4, 8, 1, 2, 10])
+
+# Write a method that accepts one argument - an array of numbers that are in ascending order. The method that returns a new array with the same values in descending order. However, do not use the "reverse" method built in to Ruby.
+
+def reverse_nums(numbers)
+  new_array = []
+  index = numbers.length - 1
+  while index >= 0
+    new_array << numbers[index]
+    index -= 1
+  end
+  new_array
+end
+
+p reverse_nums([1, 3, 5, 7])
