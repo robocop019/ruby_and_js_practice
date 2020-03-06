@@ -48,9 +48,8 @@
 # Write a method that prints out every number from 1 to 100. 
 
 # def print_nums
-#   index = 0
+#   index = 1
 #   while index <= 100
-
 #     puts index
 #     index += 1
 #   end
@@ -86,16 +85,17 @@
 # Write a method that accepts an array of strings and returns a new array that has the string "awesomesauce" inserted between every string. 
 # For example, if the initial array is ["a", "b", "c", "d", "e"], then the returned array should be ["a", "awesomesauce", "b", "awesomesauce", "c", "awesomesauce", "d", "awesomesauce", "e"].
 
-# def awesome(array)
-#   new_array = []
-#   array.each do |char|
-#     new_array << char
-#     new_array << 'awesomesauce'
-#   end
-#   new_array
-# end  
+def awesome(array)
+  new_array = []
+  array.each do |char|
+    new_array << char
+    new_array << 'awesomesauce' if array.last != char
+  end
+  new_array
+end  
 
-# p awesome(["a", "b", "c", "d", "e"])
+p awesome(["a", "b", "c", "d", "e"])
+
 
 # Start with the hash: item_amounts = {chair: 5, table: 2}
 # Someone just bought two chairs. Change the hash such that the chair amount is 3.
@@ -137,14 +137,14 @@
 # Write a method that accepts two arrays of numbers, and prints the sum of every combination of numbers from first and second array. 
 # For example, if the method receives [1, 5, 10] and [100, 500, 1000], the method should print a list: 101, 501, 1001, 105, 505, 1005, 110, 510, 1010].
 
-def adding_arrays(array_1, array_2)
-  new_array = []
-  array_1.each do |num_1|
-    array_2.each do |num_2|
-      new_array << num_1 + num_2
-    end
-  end
-  new_array
-end
+# def adding_arrays(array_1, array_2)
+#   new_array = []
+#   array_1.each do |num_1|
+#     array_2.each do |num_2|
+#       new_array << num_1 + num_2
+#     end
+#   end
+#   new_array
+# end
 
-p adding_arrays([1, 5, 10], [100, 500, 1000])
+# p adding_arrays([1, 5, 10], [100, 500, 1000])

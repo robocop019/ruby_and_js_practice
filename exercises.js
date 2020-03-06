@@ -47,7 +47,7 @@
 // Write a method that prints out every number from 1 to 100. 
 
 // function printNums() {
-//   var index = 0;
+//   var index = 1;
 //   while(index <= 100) {
 //     console.log(index);
 //     index += 1;
@@ -74,7 +74,7 @@
 
 // Write a method that accepts an array of numbers as a parameter, and counts how many 55’s there are in the array.
 
-// function count55(array){
+// function count55(array) {
 //   var count = 0;
 //   array.forEach(function(number){
 //     if(number === 55){
@@ -89,15 +89,17 @@
 // Write a method that accepts an array of strings and returns a new array that has the string "awesomesauce" inserted between every string. 
 // For example, if the initial array is ["a", "b", "c", "d", "e"], then the returned array should be ["a", "awesomesauce", "b", "awesomesauce", "c", "awesomesauce", "d", "awesomesauce", "e"].
 
-// function awesome(array) {
-//   newArray = [];
-//   array.forEach(function(char){
-//     newArray.push(char, 'awesomesauce');
-//   });
-//   return newArray;
-// }
+function awesome(array) {
+  var newArray = [];
+  var lastItem = array.pop();
+  array.forEach(function(char){
+    newArray.push(char, 'awesomesauce');
+  });
+  newArray.push(lastItem);
+  return newArray;
+}
 
-// console.log(awesome(["a", "b", "c", "d", "e"]));
+console.log(awesome(["a", "b", "c", "d", "e"]));
 
 
 // Start with the hash: item_amounts = {chair: 5, table: 2}
@@ -142,14 +144,14 @@
 // Write a method that accepts two arrays of numbers, and prints the sum of every combination of numbers from first and second array. 
 // For example, if the method receives [1, 5, 10] and [100, 500, 1000], the method should print a list: 101, 501, 1001, 105, 505, 1005, 110, 510, 1010].
 
-function addingArrays(array1, array2) {
-  var newArray = [];
-  array1.forEach(function(num1){
-    array2.forEach(function(num2) {
-      newArray.push(num1 + num2);
-    });
-  });
-  return newArray;
-}
+// function addingArrays(array1, array2) {
+//   var newArray = [];
+//   array1.forEach(function(num1){
+//     array2.forEach(function(num2) {
+//       newArray.push(num1 + num2);
+//     });
+//   });
+//   return newArray;
+// }
 
-console.log(addingArrays([1, 5, 10], [100, 500, 1000]));
+// console.log(addingArrays([1, 5, 10], [100, 500, 1000]));
